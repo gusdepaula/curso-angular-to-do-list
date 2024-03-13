@@ -9,7 +9,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { TodoInputAddItensComponent } from './components/todo-input-add-itens/todo-input-add-itens.component';
-import { ToDoButtonDeleteAllComponent } from './components/to-do-button-delete-all/to-do-button-delete-all.component';
+import { TodoButtonDeleteAllComponent } from './components/todo-button-delete-all/todo-button-delete-all.component';
 
 @NgModule({
   declarations: [],
@@ -20,7 +20,7 @@ import { ToDoButtonDeleteAllComponent } from './components/to-do-button-delete-a
     HeaderComponent,
     TodoListComponent,
     TodoInputAddItensComponent,
-    ToDoButtonDeleteAllComponent,
+    TodoButtonDeleteAllComponent,
   ],
 })
 export class HomeModule {}
