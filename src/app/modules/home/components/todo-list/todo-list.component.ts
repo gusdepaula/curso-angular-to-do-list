@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, DoCheck, OnInit } from '@angular/core';
 import { TodoInputAddItensComponent } from '../todo-input-add-itens/todo-input-add-itens.component';
 import { TodoButtonDeleteAllComponent } from '../todo-button-delete-all/todo-button-delete-all.component';
 import { TaskList } from '../../model/task-list';
@@ -17,7 +17,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './todo-list.component.html',
   styleUrl: './todo-list.component.scss',
 })
-export class TodoListComponent implements OnInit {
+export class TodoListComponent implements DoCheck {
   public taskList: Array<TaskList> = [
     { task: 'Minha nova Task', checked: true },
     { task: 'Minha nova Task 2', checked: false },
@@ -25,7 +25,11 @@ export class TodoListComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngDoCheck(): void {
+    this.taskList.sort(
+      (first, last) => Number(first.checked) - Number(last.checked)
+    );
+  }
 
   public setEmitTaskList(event: string) {
     this.taskList.push({ task: event, checked: false });
@@ -40,6 +44,16 @@ export class TodoListComponent implements OnInit {
 
     if (confirm) {
       this.taskList = [];
+    }
+  }
+
+  public validationInput(event: string, index: number) {
+    if (!event.length) {
+      const confirm = window.confirm('Task está sem vazia, deseja deletar?');
+
+      if (confirm) {
+        this.deleteItemTaskList(index);
+      }
     }
   }
 }
