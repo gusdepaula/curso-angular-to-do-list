@@ -2,6 +2,7 @@
 
 **Você deverá criar um to-do list de acordo com o layout no figma.**<br>
 Layout: https://www.figma.com/file/ZX3XOso5AovkNOQVqoEQum/My-Todo-List?node-id=0%3A1
+
 <p>To-Do Lists são listas de todas as tarefas que você precisa realizar, ou seja, elas listam tudo que você tem a fazer</p>
 <ol>
   <li>
@@ -29,11 +30,10 @@ Layout: https://www.figma.com/file/ZX3XOso5AovkNOQVqoEQum/My-Todo-List?node-id=0
   </li>
 </ol>
 
-## Assets
-Download Assets: https://vidafullstack.com.br/wp-content/uploads/2021/03/to-do-list-assets.zip
-
 ## Pluss
+
 Essa lista deverá ser salva no localStorage.
 
 ## Build
-Suba seu código no github e ghPages como este exemplo => [ https://troquatte.github.io/curso-angular-to-do-list/ ]
+
+Suba seu código no github e ghPages como este exemplo => [ https://gusdepaula.github.io/curso-angular-to-do-list/browser/]
